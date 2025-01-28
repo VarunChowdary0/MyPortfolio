@@ -7,6 +7,11 @@ import HomePage from './components/HomePage';
 import Header from './components/Header';
 import Introduction from './components/Introduction';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Education from './components/Education';
+import InternShipsAndCertifs from './components/InternShipsAndCertifs';
+import CodingProfiles from './components/CodingProfiles';
+import Contact from './components/Contact';
 
 
 
@@ -37,12 +42,12 @@ const App:React.FC = () => {
         }
         />
         <Route path='/' element={<HomePage/>}>
-          <Route path='/projects' element={<div>Projects</div>}/>
+          <Route path='/projects' element={<Projects/>}/>
           <Route path='/skills' element={<Skills/>}/>
-          <Route path='/education' element={<div>Education</div>}/>
-          <Route path='/internships' element={<div>Internships & Certifications</div>}/>
-          <Route path='/codingProfiles' element={<div>Coding Profiles</div>}/>
-          <Route path='/contact' element={<div>Contact</div>}/>
+          <Route path='/education' element={<Education/>}/>
+          <Route path='/internships' element={<InternShipsAndCertifs/>}/>
+          <Route path='/codingProfiles' element={<CodingProfiles/>}/>
+          <Route path='/contact' element={<Contact/>}/>
         </Route>
       </Routes>
     </Router>
