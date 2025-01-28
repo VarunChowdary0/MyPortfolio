@@ -32,7 +32,7 @@ const Introduction: React.FC = () => {
               <div className='text-7xl max-sm:text-6xl text-[#282727] font-bold'>
                 Hi, I'm <span className='text-indigo-600'>Sai Varun</span>
               </div>
-              <div className='font-4 h-10 text-[#817f7f] text-4xl max-sm:text-3xl tracking-tight'>
+              <div className='font-4 min-h-10 text-[#817f7f] text-4xl max-sm:text-3xl tracking-tight'>
                 <Typewriter
                 onInit={(typewriter) => {
                     typewriter
