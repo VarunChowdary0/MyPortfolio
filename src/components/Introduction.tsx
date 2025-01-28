@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Git_hub from '../icons/Git_hub'
 import Linked_in from '../icons/Linked_in'
 import TwitterIcon from '../icons/TwitterIcon'
 
 const Introduction:React.FC = () => {
+    useEffect(()=>{
+        document.title = "About"
+    },[])
   return (
     <div className='  min-w-screen min-h-screen bg-black/0 flex max-sm:flex-col max-md:flex-col  '>
         <div className='_left w-[50%] max-md:w-full px-24 max-sm:px-5 max-sm:py-10 py-28 min-h-full 

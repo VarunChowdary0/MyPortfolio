@@ -22,8 +22,8 @@ img {
 
   /* Custom Scrollbar for All Elements */
 *::-webkit-scrollbar {
-    width: 12px;  /* Adjust width of the vertical scrollbar */
-    height: 12px; /* Adjust height of the horizontal scrollbar */
+    width: 0px;  /* Adjust width of the vertical scrollbar */
+    height: 0px; /* Adjust height of the horizontal scrollbar */
   }
   
   *::-webkit-scrollbar-thumb {
