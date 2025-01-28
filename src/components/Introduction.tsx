@@ -33,7 +33,7 @@ const Introduction:React.FC = () => {
                         </div>
                     </div>
                     <div className=' mt-5 pr-10 tracking-wide '>
-                        <p className=' leading-7 max-sm:text-sm text-xl font-thin'>
+                        <p className=' leading-7 max-sm:text-[16px] text-xl font-thin'>
                         I am a dedicated Computer Science student passionate about learning and problem-solving, 
                         seeking opportunities to grow, contribute, 
                         and apply my skills in software development and technology.
