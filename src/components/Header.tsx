@@ -111,21 +111,21 @@ const Header:React.FC = () => {
                             <ArrowIcon color='white'/>
                         </div>
                     </div>
-                    <Link className=' hover:scale-105 w-fit transition-all' to="/">
+                    <Link onClick={()=>{setShow(false)}} className=' hover:scale-105 w-fit transition-all' to="/">
                         <p>Home</p>
                         {
                             location.pathname==='/' &&
                             <div className=' w-full h-1 rounded bg-[#ed7014]'></div>
                         }
                     </Link>
-                    <Link className=' hover:scale-105 w-fit transition-all' to="/skills">
+                    <Link onClick={()=>{setShow(false)}} className=' hover:scale-105 w-fit transition-all' to="/skills">
                         <p>Skills</p>
                         {
                             location.pathname==='/skills' &&
                             <div className=' w-full h-1 rounded bg-[#ed7014]'></div>
                         }
                     </Link>
-                    <Link className=' hover:scale-105 w-fit transition-all' to="/projects">
+                    <Link onClick={()=>{setShow(false)}} className=' hover:scale-105 w-fit transition-all' to="/projects">
                         <p>
                             Projects
                         </p>
@@ -134,14 +134,14 @@ const Header:React.FC = () => {
                             <div className=' w-full h-1 rounded bg-[#ed7014]'></div>
                         }
                     </Link>
-                    <Link className=' hover:scale-105 w-fit transition-all' to="/education">
+                    <Link onClick={()=>{setShow(false)}} className=' hover:scale-105 w-fit transition-all' to="/education">
                         <p>Education</p>
                         {  
                             location.pathname==='/education' &&
                             <div className=' w-full h-1 rounded bg-[#ed7014]'></div>
                         }
                     </Link>
-                    <Link className= ' max-w-[200px] hover:scale-105 w-fit transition-all' to="/internships">
+                    <Link onClick={()=>{setShow(false)}} className= ' max-w-[200px] hover:scale-105 w-fit transition-all' to="/internships">
                         <p>Intenships &  
                             <span className=' ml-2'>Certifications</span>
                         </p>
@@ -150,14 +150,14 @@ const Header:React.FC = () => {
                             <div className=' w-full h-1 rounded bg-[#ed7014]'></div>
                         }
                     </Link>
-                    <Link className=' hover:scale-105 w-fit transition-all' to="/codingProfiles">
+                    <Link onClick={()=>{setShow(false)}} className=' hover:scale-105 w-fit transition-all' to="/codingProfiles">
                         <p>Coding Profiles</p>
                         {  
                             location.pathname==='/codingProfiles' &&
                             <div className=' w-full h-1 rounded bg-[#ed7014]'></div>
                         }
                     </Link>
-                    <Link className=' hover:scale-105 w-fit transition-all' to="/contact">
+                    <Link onClick={()=>{setShow(false)}} className=' hover:scale-105 w-fit transition-all' to="/contact">
                         <p>Contact</p>
                         {  
                             location.pathname==='/contact' &&
