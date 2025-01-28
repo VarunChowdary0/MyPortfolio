@@ -25,15 +25,15 @@ const Introduction:React.FC = () => {
                 </div>
                 <div>
                     <div className=' flex flex-col gap-5 font-semibold'>
-                        <div className=' text-7xl text-[#282727] font-bold'>
+                        <div className=' text-7xl max-sm:text-6xl text-[#282727] font-bold'>
                             Hi, I'm <span className=' text-indigo-600'>Sai varun</span>
                         </div>
-                        <div className=' font-4 text-[#817f7f] text-4xl  tracking-tight'>
+                        <div className=' font-4 text-[#817f7f] text-4xl max-sm:text-3xl tracking-tight'>
                             Computer Science Student
                         </div>
                     </div>
                     <div className=' mt-5 pr-10 tracking-wide '>
-                        <p className=' leading-7 text-xl font-thin'>
+                        <p className=' leading-7 max-sm:text-md text-xl font-thin'>
                         I am a dedicated Computer Science student passionate about learning and problem-solving, 
                         seeking opportunities to grow, contribute, 
                         and apply my skills in software development and technology.
