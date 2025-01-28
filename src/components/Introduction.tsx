@@ -13,13 +13,13 @@ const Introduction:React.FC = () => {
                  <div className=' w-fit h-fit flex gap-16 items-center 
                  py-7 max-w-screen justify-around mt-1 flex-col max-sm:py-3
                 max-sm:gap-9 bg-black/0 px-3 rounded-md max-sm:flex-row z-0 '>
-                    <a className=' scale-[1.75] ' href="">
+                    <a target='_blank' className=' scale-[1.75] ' href="https://www.linkedin.com/in/sai-varun-chowdary-poludasu-908051259/">
                         <Linked_in />
                     </a>
-                    <a className=' scale-105 ' href="">
+                    <a target='_blank'className=' scale-105 ' href="https://github.com/VarunChowdary0">
                         <Git_hub />
                     </a>
-                    <a className=' scale-150' href=''>
+                    <a target='_blank'className=' scale-150' href=''>
                         <TwitterIcon/>
                     </a>
                 </div>
