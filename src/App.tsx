@@ -4,15 +4,15 @@ import {
     Routes,Route
 } from "react-router-dom";
 import HomePage from './components/HomePage';
-import Header from './components/Header';
-import Introduction from './components/Introduction';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import InternShipsAndCertifs from './components/InternShipsAndCertifs';
 import CodingProfiles from './components/CodingProfiles';
 import Contact from './components/Contact';
+import Myskills from './widgets/allSkills';
 
+      
 
 
 
@@ -43,7 +43,7 @@ const App:React.FC = () => {
         />
         <Route path='/' element={<HomePage/>}>
           <Route path='/projects' element={<Projects/>}/>
-          <Route path='/skills' element={<Skills/>}/>
+          <Route path='/skills' element={<Skills skills={Myskills}/>}/>
           <Route path='/education' element={<Education/>}/>
           <Route path='/internships' element={<InternShipsAndCertifs/>}/>
           <Route path='/codingProfiles' element={<CodingProfiles/>}/>

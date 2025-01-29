@@ -9,8 +9,8 @@ const Header:React.FC = () => {
     const [show,setShow] = useState<boolean>(false);
   return (
     <>
-        <div className=' max-sm:hidden max-md:hidden sticky h-[40px] flex items-center justify-end top-0 left-0 right-0 bg-red-500/0'>
-            <div className=' p-2 pt-3 flex gap-[3vw] bg-gradient-to-r from-[#272728]
+        <div className='z-[10000] max-sm:hidden max-md:hidden sticky h-[40px] flex items-center justify-end top-0 left-0 right-0 bg-red-500/0'>
+            <div className=' z-[10000] p-2 pt-3 flex gap-[3vw] bg-gradient-to-r from-[#272728]
             via-[#2f261d] via-[#32271b] via-[#32271b]
             via-[#30251a] via-[#3a1c1b] via-[#36191b] 
             via-[#36191b]
