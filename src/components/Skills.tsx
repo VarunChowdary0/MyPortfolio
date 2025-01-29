@@ -33,12 +33,12 @@ const Skills:React.FC = () => {
           { skill: 'BS 4', logo: '/Logos/bs.svg', type: 'technical-l' },
           { skill: 'Chart.js', logo: '/Logos/chartjs.svg', type: 'technical-l' },
           { skill: 'Seaborn', logo: '/Logos/seaborn.svg', type: 'technical-l' },
-          { skill: 'Postman', logo: '/Logos/Postman.svg', type: 'technical-l' },
+          { skill: 'Postman', logo: '/Logos/postman.svg', type: 'technical-l' },
           
           // Web Technologies
           { skill: 'HTML', logo: '/Logos/html.svg', type: 'technical-web' },
           { skill: 'CSS', logo: '/Logos/css.svg', type: 'technical-web' },
-          { skill: 'Bootstrap', logo: '/Logos/Bootstrap.svg', type: 'technical-web' },
+          { skill: 'Bootstrap', logo: '/Logos/bootstrap.svg', type: 'technical-web' },
         
           // Databases
           { skill: 'MongoDB', logo: '/Logos/mongodb.svg', type: 'technical-db' },
@@ -47,12 +47,13 @@ const Skills:React.FC = () => {
         
           // Tools & Platforms
           { skill: 'Git', logo: '/Logos/git.svg', type: 'technical-tool' },
-          { skill: 'GitHub', logo: '/Logos/GitHub.svg', type: 'technical-tool' },
+          { skill: 'GitHub', logo: '/Logos/github.svg', type: 'technical-tool' },
           { skill: 'WebSockets', logo: '/Logos/websocket.svg', type: 'technical-tool' },
-          { skill: 'Vercel', logo: '/Logos/Vercel.svg', type: 'technical-tool' },
-          { skill: 'Jupyter', logo: '/Logos/Jupyter.svg', type: 'technical-tool' },
-          { skill: 'Mongoose', logo: '/Logos/Mongoose.svg', type: 'technical-tool' },
+          { skill: 'Vercel', logo: '/Logos/vercel.svg', type: 'technical-tool' },
+          { skill: 'Jupyter', logo: '/Logos/jupyter.svg', type: 'technical-tool' },
+          { skill: 'Mongoose', logo: '/Logos/mongoose.svg', type: 'technical-tool' },
           { skill: 'VS Code', logo: '/Logos/vscode.svg', type: 'technical-tool' },
+          { skill: 'Intellij', logo: '/Logos/intellij.svg', type: 'technical-tool' },
         
           // Soft Skills
           { skill: 'Problem Solving', logo: '/Logos/problem-solving.svg', type: 'soft-skill' },
@@ -67,7 +68,7 @@ const Skills:React.FC = () => {
     <div className=' w-screen h-fit min-h-[95vh] 
     bg-black/0 flex py-[8vh] max-sm:py-5 max-sm:pb-28  px-[6vw] '>
           <div className=' p-10 border-2  flex-col gap-4 rounded-md w-full shadow-xl
-             hover:shadow-2xl transition-shadow duration-500 flex
+             hover:shadow-2xl transition-shadow duration-500 flex max-sm:p-5
                flex-wrap'>
               <div className=' 
                bg-gradient-to-r from-[#272728] 
