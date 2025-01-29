@@ -53,7 +53,7 @@ const Skills:React.FC = () => {
           { skill: 'Jupyter', logo: '/Logos/jupyter_.svg', type: 'technical-tool' },
           { skill: 'Mongoose', logo: '/Logos/mongoose_.svg', type: 'technical-tool' },
           { skill: 'VS Code', logo: '/Logos/vscode.svg', type: 'technical-tool' },
-          { skill: 'Intellij', logo: '/Logos/intellij_.svg', type: 'technical-tool' },
+          { skill: 'Intellij', logo: '/Logos/intellij.svg', type: 'technical-tool' },
         
           // Soft Skills
           { skill: 'Problem Solving', logo: '/Logos/problem-solving.svg', type: 'soft-skill' },
