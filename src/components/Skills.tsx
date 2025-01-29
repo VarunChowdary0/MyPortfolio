@@ -17,7 +17,7 @@ const Skills:React.FC = () => {
           { skill: 'JavaScript', logo: '/Logos/javascript.svg', type: 'technical-lang' },
           { skill: 'TypeScript', logo: '/Logos/typescript.svg', type: 'technical-lang' },
           { skill: 'C', logo: '/Logos/c.svg', type: 'technical-lang' },
-          { skill: 'C++', logo: '/Logos/c++.svg', type: 'technical-lang' },
+          { skill: 'C++', logo: '/Logos/cpp.svg', type: 'technical-lang' },
         
           // Frameworks & Libraries
           { skill: 'React', logo: '/Logos/react.svg', type: 'technical-web' },
