@@ -22,16 +22,16 @@ const Skills:React.FC = () => {
           // Frameworks & Libraries
           { skill: 'React', logo: '/Logos/react.svg', type: 'technical-web' },
           { skill: 'Node.js', logo: '/Logos/node.svg', type: 'technical-web' },
-          { skill: 'Express.js', logo: '/Logos/express.png', type: 'technical-web' },
-          { skill: 'Flask', logo: '/Logos/flask.png', type: 'technical-l' },
-          { skill: 'Flask', logo: '/Logos/flask.png', type: 'technical-web' },
+          { skill: 'Express.js', logo: '/Logos/express.svg', type: 'technical-web' },
+          { skill: 'Flask', logo: '/Logos/flask.svg', type: 'technical-l' },
+          { skill: 'Flask', logo: '/Logos/flask.svg', type: 'technical-web' },
           { skill: 'TailwindCSS', logo: '/Logos/tailwind.svg', type: 'technical-web' },
           { skill: 'Redux', logo: '/Logos/redux.svg', type: 'technical-web' },
           { skill: 'TensorFlow', logo: '/Logos/tensorflow.svg', type: 'technical-l' },
-          { skill: 'Pandas', logo: '/Logos/pandas.png', type: 'technical-l' },
+          { skill: 'Pandas', logo: '/Logos/pandas.svg', type: 'technical-l' },
           { skill: 'NumPy', logo: '/Logos/numpy.svg', type: 'technical-l' },
           { skill: 'BS 4', logo: '/Logos/bs.svg', type: 'technical-l' },
-          { skill: 'Chart.js', logo: '/Logos/chartjs.png', type: 'technical-l' },
+          { skill: 'Chart.js', logo: '/Logos/chartjs.svg', type: 'technical-l' },
           { skill: 'Seaborn', logo: '/Logos/seaborn.svg', type: 'technical-l' },
           { skill: 'Postman', logo: '/Logos/Postman.svg', type: 'technical-l' },
           
@@ -47,12 +47,12 @@ const Skills:React.FC = () => {
         
           // Tools & Platforms
           { skill: 'Git', logo: '/Logos/git.svg', type: 'technical-tool' },
-          { skill: 'GitHub', logo: '/Logos/GitHub.png', type: 'technical-tool' },
-          { skill: 'WebSockets', logo: '/Logos/websocket.png', type: 'technical-tool' },
-          { skill: 'Vercel', logo: '/Logos/Vercel.png', type: 'technical-tool' },
-          { skill: 'Jupyter', logo: '/Logos/Jupyter.png', type: 'technical-tool' },
+          { skill: 'GitHub', logo: '/Logos/GitHub.svg', type: 'technical-tool' },
+          { skill: 'WebSockets', logo: '/Logos/websocket.svg', type: 'technical-tool' },
+          { skill: 'Vercel', logo: '/Logos/Vercel.svg', type: 'technical-tool' },
+          { skill: 'Jupyter', logo: '/Logos/Jupyter.svg', type: 'technical-tool' },
           { skill: 'Mongoose', logo: '/Logos/Mongoose.svg', type: 'technical-tool' },
-          { skill: 'VS Code', logo: '/Logos/vscode.png', type: 'technical-tool' },
+          { skill: 'VS Code', logo: '/Logos/vscode.svg', type: 'technical-tool' },
         
           // Soft Skills
           { skill: 'Problem Solving', logo: '/Logos/problem-solving.svg', type: 'soft-skill' },
