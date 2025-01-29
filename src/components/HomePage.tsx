@@ -8,7 +8,7 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-    <div className=' bg-[#fbfafe 0]'>
+    <div className=' bg-[#f1efec] '>
       <Header />
       {location.pathname === '/' ? <Introduction /> : <Outlet />}
       <div className=' fixed bottom-10 right-6'>

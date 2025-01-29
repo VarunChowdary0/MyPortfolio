@@ -73,11 +73,11 @@ const Introduction: React.FC = () => {
       </div>
       <div className='_rigth w-[50%] max-md:w-full min-h-full bg-red-400/0 max-sm:w-full max-sm:h-fit flex'>
         <div className='max-sm:hidden select-none h-fit w-fit mt-20 max-sm:mt-0 bg-black/0 transition-all animate-random-move'>
-          <img className='' src='/2f533018fa4725ec75a26c1fab07cb8a.png' alt='' />
+          <img className='imgcvc' src='/2f533018fa4725ec75a26c1fab07cb8a.png' alt='' />
           {/* <img className='' src='/me.png' alt='' /> */}
         </div>
         <div className='select-none hidden max-sm:block h-fit w-fit mt-20 max-sm:mt-0 bg-black/0 transition-all animate-random-move-sm'>
-          <img className='' src='/2f533018fa4725ec75a26c1fab07cb8a.png' alt='' />
+          <img className='imgcvc' src='/2f533018fa4725ec75a26c1fab07cb8a.png' alt='' />
           {/* <img className='' src='/me.png' alt='' /> */}
         </div>
       </div>

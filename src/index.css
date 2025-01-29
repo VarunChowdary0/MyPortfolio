@@ -12,7 +12,7 @@ body {
 svg{
     z-index: 0;
 }
-img {
+.imgcvc {
     filter: drop-shadow(5px 5px 15px #351e1c98);
   }
 
