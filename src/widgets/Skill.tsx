@@ -11,7 +11,7 @@ const Skill:React.FC<currentProps> = (props) => {
     items-center justify-center flex-col
      max-sm:w-[83px] max-sm:h-[83px] max-sm:gap-0
     '>
-        <img className=' h-[60px] max-sm:h-[45px] fill-white' 
+        <img className=' h-[60px] rounded-lg max-sm:h-[45px] fill-white' 
         src={props.src} alt={props.name}/>
         <p className=' text-lg max-sm:text-sm text-[#6558d1]'>{props.name}</p>
     </div>

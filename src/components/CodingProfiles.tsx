@@ -5,7 +5,8 @@ const CodingProfiles:React.FC = () => {
         document.title = 'Coding Profile'
     },[])
     return (
-    <div>CodingProfiles</div>
+      <div className=' h-screen w-full flex items-center justify-center'>
+        CodingProfiles</div>
   )
 }
 

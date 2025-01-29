@@ -4,7 +4,17 @@ const Myskills: {
         logo: string;
         type: string;
         }[] = [
-        // Programming Languages
+            { skill: 'React', logo: '/Logos/react.svg', type: 'technical-web' },
+            // Web Technologies
+            { skill: 'HTML', logo: '/Logos/html.svg', type: 'technical-web' },
+            { skill: 'CSS', logo: '/Logos/css.svg', type: 'technical-web' },
+            { skill: 'Bootstrap', logo: '/Logos/bootstrap_.svg', type: 'technical-web' },
+            { skill: 'Node.js', logo: '/Logos/node.svg', type: 'technical-web' },
+            { skill: 'Express.js', logo: '/Logos/express_.svg', type: 'technical-web' },
+            { skill: 'TailwindCSS', logo: '/Logos/tailwind.svg', type: 'technical-web' },
+            { skill: 'Redux', logo: '/Logos/redux.svg', type: 'technical-web' },
+            { skill: 'Flask', logo: '/Logos/flask_.svg', type: 'technical-web' },
+            // --
             { skill: 'Python', logo: '/Logos/python.svg', type: 'technical-lang' },
             { skill: 'Java', logo: '/Logos/java.svg', type: 'technical-lang' },
             { skill: 'JavaScript', logo: '/Logos/javascript.svg', type: 'technical-lang' },
@@ -13,13 +23,7 @@ const Myskills: {
             { skill: 'C++', logo: '/Logos/cpp.svg', type: 'technical-lang' },
             
             // Frameworks & Libraries
-            { skill: 'React', logo: '/Logos/react.svg', type: 'technical-web' },
-            { skill: 'Node.js', logo: '/Logos/node.svg', type: 'technical-web' },
-            { skill: 'Express.js', logo: '/Logos/express_.svg', type: 'technical-web' },
             { skill: 'Flask', logo: '/Logos/flask_.svg', type: 'technical-l' },
-            { skill: 'Flask', logo: '/Logos/flask_.svg', type: 'technical-web' },
-            { skill: 'TailwindCSS', logo: '/Logos/tailwind.svg', type: 'technical-web' },
-            { skill: 'Redux', logo: '/Logos/redux.svg', type: 'technical-web' },
             { skill: 'TensorFlow', logo: '/Logos/tensorflow_.svg', type: 'technical-l' },
             { skill: 'Pandas', logo: '/Logos/pandas_.svg', type: 'technical-l' },
             { skill: 'NumPy', logo: '/Logos/numpy_.svg', type: 'technical-l' },
@@ -28,10 +32,6 @@ const Myskills: {
             { skill: 'Seaborn', logo: '/Logos/seaborn.svg', type: 'technical-l' },
             { skill: 'Postman', logo: '/Logos/postman_.svg', type: 'technical-l' },
             
-            // Web Technologies
-            { skill: 'HTML', logo: '/Logos/html.svg', type: 'technical-web' },
-            { skill: 'CSS', logo: '/Logos/css.svg', type: 'technical-web' },
-            { skill: 'Bootstrap', logo: '/Logos/bootstrap_.svg', type: 'technical-web' },
             
             // Databases
             { skill: 'MongoDB', logo: '/Logos/mongodb.svg', type: 'technical-db' },

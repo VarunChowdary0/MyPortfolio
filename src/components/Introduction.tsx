@@ -5,6 +5,7 @@ import TwitterIcon from '../icons/TwitterIcon';
 import Emilicon from '../icons/Emilicon';
 import ArrowIcon from '../icons/ArrowIcon';
 import Typewriter from "typewriter-effect";
+import { Link } from 'react-router-dom';
 
 
 const Introduction: React.FC = () => {
@@ -37,7 +38,7 @@ const Introduction: React.FC = () => {
                 onInit={(typewriter) => {
                     typewriter
                     .typeString("Welcomes You")
-                    .pauseFor(2000)
+                    .pauseFor(1000)
                     .deleteAll()
                     .typeString("Software Developer")
                     .pauseFor(2000)
@@ -57,13 +58,15 @@ const Introduction: React.FC = () => {
             </div>
 
             <div className='w-full bg-black/0 mt-8 flex'>
-              <div className='flex hover:scale-105 transition-all duration-500 items-center justify-center gap-3 py-4 px-4 bg-[#6857d8] rounded-lg text-white'>
-                <span>Contact Me</span>
-                <div className='fill-white rotate-90'>
-                  <ArrowIcon color='#fff' />
+              <Link to={'/contact'}>
+                <div className='flex hover:scale-105 transition-all duration-500 items-center justify-center gap-3 py-4 px-4 bg-[#6857d8] rounded-lg text-white'>
+                  <span>Contact Me</span>
+                  <div className='fill-white rotate-90'>
+                    <ArrowIcon color='#fff' />
+                  </div>
+                  <Emilicon />
                 </div>
-                <Emilicon />
-              </div>
+              </Link>
             </div>
 
           </div>

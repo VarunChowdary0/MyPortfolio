@@ -21,9 +21,13 @@ svg{
   }
 
   /* Custom Scrollbar for All Elements */
-*::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 0px;  /* Adjust width of the vertical scrollbar */
     height: 0px; /* Adjust height of the horizontal scrollbar */
+  }
+*::-webkit-scrollbar {
+    width: 5px;  /* Adjust width of the vertical scrollbar */
+    height: 5px; /* Adjust height of the horizontal scrollbar */
   }
   
   *::-webkit-scrollbar-thumb {
@@ -32,7 +36,7 @@ svg{
   }
   
   *::-webkit-scrollbar-track {
-    background-color: #362b2b35; /* Track color */
+    background-color: #362b2b00; /* Track color */
     border-radius: 10px; /* Rounded corners */
   }
   

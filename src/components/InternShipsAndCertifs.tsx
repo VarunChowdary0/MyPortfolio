@@ -5,7 +5,8 @@ const InternShipsAndCertifs:React.FC = () => {
           document.title = "Internships & Certificates"
       },[])
     return (
-    <div>InternShipsAndCertifs</div>
+      <div className=' h-screen w-full flex items-center justify-center'>
+      InternShipsAndCertifs</div>
   )
 }
 

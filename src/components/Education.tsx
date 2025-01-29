@@ -5,7 +5,8 @@ const Education:React.FC = () => {
           document.title = "Education"
       },[])
     return (
-    <div>Education</div>
+      <div className=' h-screen w-full flex items-center justify-center'>
+      Education</div>
   )
 }
 

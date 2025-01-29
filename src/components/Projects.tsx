@@ -5,7 +5,8 @@ const Projects:React.FC = () => {
             document.title = "Projects"
         },[])
   return (
-    <div>Projects</div>
+    <div className=' h-[calc(100vh-50px)] w-full flex items-center justify-center'>
+      Projects</div>
   )
 }
 
