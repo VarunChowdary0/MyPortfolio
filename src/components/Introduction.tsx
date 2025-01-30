@@ -15,7 +15,7 @@ const Introduction: React.FC = () => {
 
   return (
     <div className='min-w-screen h-[calc(100vh-40px)] bg-black/0 flex max-sm:flex-col
-    max-md:overflow-y-auto py-[8vh] 
+    max-md:overflow-y-auto 
     max-md:items-start max-md:justify-start 
     max-sm:pt-0 max-sm:justify-start max-sm:items-start 
     pt-[vh] overflow-hidden max-md:flex-col'>
