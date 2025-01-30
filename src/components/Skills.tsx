@@ -37,7 +37,7 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
 
       <div className='w-screen h-[calc(100vh-50px)] gap-10 bg-black/0 flex pt-[13vh] max-sm:pt-[12vh] 
       py-[8vh] max-sm:pb-10 max-sm:py-5 flex-col px-[6vw]'>
-        <div className='snap-center py-32 max-sm:py-20 p-10 border-2 gap-[150px]
+        <div className='snap-center py-10 max-sm:py-20 p-10 border-2 gap-[50px]
         rounded-md w-full shadow-xl hover:shadow-2xl transition-shadow 
         duration-500 flex max-sm:p-5 snap-y snap-mandatory flex-wrap h-[80vh] 
         overflow-y-auto max-sm:h-[100vh] relative'>
