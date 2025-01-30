@@ -20,6 +20,8 @@ const ScrollDrop: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+  
   return (
     <div className="flex items-center gap-10 p-10 h-[300vh]">
       {[...Array(5)].map((_, index) => (

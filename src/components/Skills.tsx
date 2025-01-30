@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Skill from '../widgets/Skill';
 import { motion } from "framer-motion";
 
@@ -15,10 +15,11 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
     document.title = "Skills";
   }, []);
 
+
   return (
     <>
       <div className="w-full overflow-hidden py-1 shadow-md fixed top-12 
-       bg-[#f0ebeb] max-sm:mt-6 max-sm:py-1">
+       bg-[#f0ebeb] max-sm:mt-6 max-sm:py-1 select-none">
         <motion.div
           className="flex border items-center max-sm:gap-[50px] gap-[100px] w-fit"
           animate={{ x: ["0%", "-100%"] }}
@@ -44,6 +45,7 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
 
           <div className=' sticky left-0 right-0 top-0 h-2 bg-black'></div>
           <div className=' sticky left-0 right-0 bottom-0 h-2 bg-black'></div>
+          
 
           <div className=' bg-gradient-to-r from-[#272728]  via-[#2f261d] 
            via-[#32271b] via-[#32271b] via-[#30251a] via-[#3a1c1b] 
@@ -54,22 +56,21 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
             <div className='px-6 flex gap-7 pb-8 flex-wrap max-md:justify-between'>
             {
                 skills.map((ele, idx) =>
-                  (ele.type === 'technical-web' && (
-                    <motion.div
+                  ele.type=='technical-web' && 
+                  <motion.div
                       key={idx}
                       className="flex justify-center items-center"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, x: 40 , scale:0.5}}
+                      animate={{ opacity: 1, x: 0, scale:1}}
                       transition={{
                         duration: 0.6,
-                        delay: idx * 0.2,
+                        delay: idx * 0.3,
                         ease: "easeOut"
                       }}
                       viewport={{ once: false, amount: 0.9 }}
                     >
                       <Skill src={ele.logo} name={ele.skill} />
                     </motion.div>
-                  ))
                 )
               }
             </div>
@@ -83,19 +84,19 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
                   skills.map((ele, idx) =>
                   (ele.type === 'technical-lang' && (
                     <motion.div
-                      key={idx}
-                      className="flex justify-center items-center"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 0.6,
-                        delay: idx * 0.3,
-                        ease: "easeOut"
-                      }}
-                      viewport={{ once: false, amount: 0.9 }}
-                    >
-                      <Skill src={ele.logo} name={ele.skill} />
-                    </motion.div>
+                    key={idx}
+                    className="flex justify-center items-center"
+                    initial={{ opacity: 0, x: 40 , scale:0.5}}
+                    animate={{ opacity: 1, x: 0, scale:1}}
+                    transition={{
+                      duration: 0.6,
+                      delay: idx * 0.3,
+                      ease: "easeOut"
+                    }}
+                    viewport={{ once: false, amount: 0.9 }}
+                  >
+                    <Skill src={ele.logo} name={ele.skill} />
+                  </motion.div>
                   ))
                 )
               }
@@ -112,11 +113,11 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
                     <motion.div
                       key={idx}
                       className="flex justify-center items-center"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, x: 40 , scale:0.5}}
+                      animate={{ opacity: 1, x: 0, scale:1}}
                       transition={{
                         duration: 0.6,
-                        delay: idx * 0.2,
+                        delay: idx * 0.3,
                         ease: "easeOut"
                       }}
                       viewport={{ once: false, amount: 0.9 }}
@@ -136,19 +137,19 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
                 skills.map((ele, idx) =>
                   (ele.type === 'technical-db' && (
                     <motion.div
-                      key={idx}
-                      className="flex justify-center items-center"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 0.6,
-                        delay: idx * 0.2,
-                        ease: "easeOut"
-                      }}
-                      viewport={{ once: false, amount: 0.9 }}
-                    >
-                      <Skill src={ele.logo} name={ele.skill} />
-                    </motion.div>
+                    key={idx}
+                    className="flex justify-center items-center"
+                    initial={{ opacity: 0, x: 40 , scale:0.5}}
+                    animate={{ opacity: 1, x: 0, scale:1}}
+                    transition={{
+                      duration: 0.6,
+                      delay: idx * 0.3,
+                      ease: "easeOut"
+                    }}
+                    viewport={{ once: false, amount: 0.9 }}
+                  >
+                    <Skill src={ele.logo} name={ele.skill} />
+                  </motion.div>
                   ))
                 )
               }
@@ -162,19 +163,19 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
                 skills.map((ele, idx) =>
                   (ele.type === 'technical-tool' && (
                     <motion.div
-                      key={idx}
-                      className="flex justify-center items-center"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 0.6,
-                        delay: idx * 0.2,
-                        ease: "easeOut"
-                      }}
-                      viewport={{ once: false, amount: 0.9 }}
-                    >
-                      <Skill src={ele.logo} name={ele.skill} />
-                    </motion.div>
+                    key={idx}
+                    className="flex justify-center items-center"
+                    initial={{ opacity: 0, x: 40 , scale:0.5}}
+                    animate={{ opacity: 1, x: 0, scale:1}}
+                    transition={{
+                      duration: 0.6,
+                      delay: idx * 0.3,
+                      ease: "easeOut"
+                    }}
+                    viewport={{ once: false, amount: 0.9 }}
+                  >
+                    <Skill src={ele.logo} name={ele.skill} />
+                  </motion.div>
                   ))
                 )
               }
