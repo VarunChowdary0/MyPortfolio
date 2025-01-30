@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Skill from '../widgets/Skill';
-import { motion } from "framer-motion";
+import { motion,useAnimation  } from "framer-motion";
 
 interface currentProps {
   skills: {
@@ -14,27 +14,48 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
   useEffect(() => {
     document.title = "Skills";
   }, []);
+  const [position, setPosition] = useState(0); // Track last dragged position
+  const controls = useAnimation();
 
+  const startAnimation = (from:any) => {
+    controls.start({
+      x: [from, "-100%"],
+      transition: { repeat: Infinity, duration: 40, ease: "linear" },
+    });
+  };
+
+  useEffect(() => {
+    startAnimation("0%");
+  }, []);
 
   return (
     <>
-      <div className="w-full overflow-hidden py-1 shadow-md fixed top-12 
-       bg-[#f0ebeb] max-sm:mt-6 max-sm:py-1 select-none">
-        <motion.div
-          className="flex border items-center max-sm:gap-[50px] gap-[100px] w-fit"
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
-        >
-          {[...skills, ...skills].map((ele, idx) => (
-            <img
-              key={idx}
-              className="max-sm:scale-90 w-[35px] h-[35px]  object-contain"
-              src={ele.logo}
-              alt="skill"
-            />
-          ))}
-        </motion.div>
-      </div>
+    <div className="w-full overflow-hidden py-1 shadow-md fixed top-12 
+      bg-[#f0ebeb] max-sm:mt-6 max-sm:py-1 select-none">
+      
+      <motion.div
+        className="flex border items-center max-sm:gap-[50px] gap-[100px] w-fit"
+        animate={controls}
+        drag="x"
+        dragConstraints={{ left: -400, right: 100 }}
+        onDrag={(event, info) => {
+          setPosition(info.point.x); // Update last dragged position
+          controls.stop(); // Pause animation while dragging
+        }}
+        onDragEnd={() => {
+          startAnimation(position); // Resume from the last dragged position
+        }}
+      >
+        {[...skills, ...skills].map((ele, idx) => (
+          <img
+            key={idx}
+            className="max-sm:scale-90 w-[35px] h-[35px] object-contain"
+            src={ele.logo}
+            alt="skill"
+          />
+        ))}
+      </motion.div>
+    </div>
 
       <div className='w-screen h-[calc(100vh-50px)] gap-10 bg-black/0 flex pt-[13vh] max-sm:pt-[12vh] 
       py-[8vh] max-sm:pb-10 max-sm:py-5 flex-col px-[6vw]'>
