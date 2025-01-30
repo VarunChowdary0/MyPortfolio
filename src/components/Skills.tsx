@@ -17,7 +17,7 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
 
   return (
     <>
-      <div className="w-full overflow-hidden py-3 shadow-md fixed top-12 
+      <div className="w-full overflow-hidden py-1 shadow-md fixed top-12 
        bg-[#f0ebeb] max-sm:mt-6 max-sm:py-1">
         <motion.div
           className="flex border items-center max-sm:gap-[50px] gap-[100px] w-fit"
@@ -27,7 +27,7 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
           {[...skills, ...skills].map((ele, idx) => (
             <img
               key={idx}
-              className="max-sm:scale-90 w-[40px] h-[40px] object-contain"
+              className="max-sm:scale-90 w-[35px] h-[35px]  object-contain"
               src={ele.logo}
               alt="skill"
             />
