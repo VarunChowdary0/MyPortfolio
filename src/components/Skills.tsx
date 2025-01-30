@@ -14,18 +14,19 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
   useEffect(() => {
     document.title = "Skills";
   }, []);
-  const [position, setPosition] = useState(0); // Track last dragged position
   const controls = useAnimation();
+  const [position, setPosition] = useState(0); // Track last known position
 
-  const startAnimation = (from:any) => {
+  // Function to start animation from the last position
+  const startAnimation = (from:number) => {
     controls.start({
-      x: [from, "-100%"],
-      transition: { repeat: Infinity, duration: 40, ease: "linear" },
+      x: [from, "-100%"], // Start from the last known position
+      transition: { repeat: Infinity, duration: 30, ease: "linear" },
     });
   };
 
   useEffect(() => {
-    startAnimation("0%");
+    startAnimation(0); // Start animation on mount
   }, []);
 
   return (
@@ -37,7 +38,7 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
         className="flex border items-center max-sm:gap-[50px] gap-[100px] w-fit"
         animate={controls}
         drag="x"
-        dragConstraints={{ left: -400, right: 100 }}
+        dragConstraints={{ left: -400, right: 0 }}
         onDrag={(event, info) => {
           setPosition(info.point.x); // Update last dragged position
           controls.stop(); // Pause animation while dragging
@@ -46,7 +47,7 @@ const Skills: React.FC<currentProps> = ({ skills }) => {
           startAnimation(position); // Resume from the last dragged position
         }}
       >
-        {[...skills, ...skills].map((ele, idx) => (
+        {skills.map((ele, idx) => (
           <img
             key={idx}
             className="max-sm:scale-90 w-[35px] h-[35px] object-contain"
