@@ -18,7 +18,9 @@ const Projects:React.FC = () => {
           link : 'https://saivarun.vercel.app',
           github : ["https://github.com/VarunChowdary0/MyPortfolio" ],
           name : 'My Portfolio ',
-          image : ['project_images/portfolio-1.png',"project_images/portfolio-2.png"],
+          image : ['project_images/portfolio-1.png',
+                   'project_images/portfolio-2.png',
+                   'project_images/portfolio-3.png'],
           tags : ['React','TailwindCss'],
           description : 'This portfolio is a personal website that highlights my skills, projects, and achievements. It serves as a professional online presence, allowing visitors to explore my work.'
         },
@@ -42,7 +44,8 @@ const Projects:React.FC = () => {
     <div className='h-[calc(100vh-40px)] w-full pt-[6px] flex items-center justify-center'>
     <div className='h-full w-[calc(100vw-2px)] pr-[2px]
      overflow-y-auto snap-y snap-mandatory'>
-      <div className='h-fit bg-black/0 w-full flex items-center justify-center flex-col py-[20vh] max-sm:py-[5vh] gap-[10vh]'>
+      <div className='h-fit bg-black/0 w-full flex items-center justify-center flex-col
+       py-[20vh] max-md:pb-[30vh] gap-[30vh]'>
         {Projects.map((ele, index) => (
           <div 
             className=" snap-center w-fit relative flex justify-center" 

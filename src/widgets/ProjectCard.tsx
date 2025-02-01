@@ -28,7 +28,7 @@ const ProjectCard:React.FC<curr> = ({data}) => {
         }
     });
   return (
-    <div className=' max-md:w-[340px]
+    <div className=' scale-[1.07] max-md:scale-100 max-md:w-[340px]
      w-[450px] rounded-md border-2 max-md:h-fit pb-10 
     border-[#8a8ef8] hover:shadow-2xl
      duration-400 transition-all h-fit min-h-[500px] shadow-lg overflow-hidden'>
