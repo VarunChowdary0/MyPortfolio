@@ -1,10 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ProjectCard from '../widgets/ProjectCard'
+import ArrowIcon from '../icons/ArrowIcon';
+import { motion } from 'framer-motion';
 
 const Projects:React.FC = () => {
     useEffect(()=>{
             document.title = "Projects"
         },[]);
+
+    const [isVisible, setIsVisible] = useState(true);
+
+        useEffect(() => {
+            const handleScroll = () => {
+                const scrollTop = window.scrollY; 
+                const windowHeight = window.innerHeight; 
+                const fullHeight = document.documentElement.scrollHeight; 
+                
+                setIsVisible(scrollTop + windowHeight < fullHeight - 1000);
+            };
+    
+            window.addEventListener("scroll", handleScroll);
+            return () => window.removeEventListener("scroll", handleScroll);
+        }, []);
 
       const Projects:{
         link : string;
@@ -42,6 +59,20 @@ const Projects:React.FC = () => {
       ];
   return (
     <div className='h-[calc(100vh-40px)] w-full pt-[6px] flex items-center justify-center'>
+      {isVisible && <div className=' fixed bottom-5 flex items-center justify-center right-7 bg-[#323232] h-10 w-10 rounded-xl rotate-[180deg]'>
+        <motion.div
+            animate={{
+                y: [-2, 3, -2,], 
+            }}
+            transition={{
+                duration: 3,
+                repeat: Infinity, 
+                ease: "easeInOut", 
+            }}
+            >
+            <ArrowIcon color="#fff" />
+        </motion.div>
+      </div>}
     <div className='h-full w-[calc(100vw-2px)] pr-[2px]
      overflow-y-auto snap-y snap-mandatory'>
       <div className='h-fit bg-black/0 w-full flex items-center justify-center flex-col
