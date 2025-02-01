@@ -17,6 +17,7 @@ const Myskills: {
             // --
             { skill: 'Python', logo: '/Logos/python.svg', type: 'technical-lang' },
             { skill: 'Java', logo: '/Logos/java.svg', type: 'technical-lang' },
+            { skill: 'C#', logo: '/Logos/c_sharp.svg', type: 'technical-lang' },
             { skill: 'JavaScript', logo: '/Logos/javascript.svg', type: 'technical-lang' },
             { skill: 'TypeScript', logo: '/Logos/typescript.svg', type: 'technical-lang' },
             { skill: 'C', logo: '/Logos/c_.svg', type: 'technical-lang' },
@@ -24,6 +25,7 @@ const Myskills: {
             
             // Frameworks & Libraries
             { skill: 'Flask', logo: '/Logos/flask_.svg', type: 'technical-l' },
+            { skill: '.NET', logo: '/Logos/dotnet.svg', type: 'technical-l' },
             { skill: 'TensorFlow', logo: '/Logos/tensorflow_.svg', type: 'technical-l' },
             { skill: 'Pandas', logo: '/Logos/pandas_.svg', type: 'technical-l' },
             { skill: 'NumPy', logo: '/Logos/numpy_.svg', type: 'technical-l' },
@@ -47,6 +49,7 @@ const Myskills: {
             { skill: 'Mongoose', logo: '/Logos/mongoose_.svg', type: 'technical-tool' },
             { skill: 'VS Code', logo: '/Logos/vscode.svg', type: 'technical-tool' },
             { skill: 'Intellij', logo: '/Logos/intellij.svg', type: 'technical-tool' },
+            { skill: 'Rider', logo: '/Logos/rider.svg', type: 'technical-tool' },
             
             // Soft Skills
             // { skill: 'Problem Solving', logo: '/Logos/problem-solving.svg', type: 'soft-skill' },
