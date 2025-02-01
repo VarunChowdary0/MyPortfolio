@@ -35,9 +35,15 @@ const ProjectCard:React.FC<curr> = ({data}) => {
         <motion.div
                 onHoverStart={() => setChange(false)}
                 onHoverEnd={() => setChange(true)}  
-                onTap={() =>{
+                onTapStart={() =>{
                             if(window.innerWidth <= 768){
-                                setChange((prev) => !prev)
+                                setChange(false)
+                            }    
+                        }
+                } 
+                onTapCancel={() =>{
+                            if(window.innerWidth <= 768){
+                                setChange(true)
                             }    
                         }
                 } 
@@ -73,7 +79,7 @@ const ProjectCard:React.FC<curr> = ({data}) => {
                 </div>
             </div>}
             <img 
-                className="h-full w-full object-cover" 
+                className="h-full select-none w-full object-cover" 
                 src={data.image[img]} 
                 alt="loading..." 
             />
