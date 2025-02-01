@@ -22,7 +22,7 @@ const ProjectCard:React.FC<curr> = ({data}) => {
         if(change){
             const timer = setTimeout(()=>{
                 setImg((prev)=>(prev+1)%data.image.length);
-            },3000);
+            },2500);
 
             return ()=> clearTimeout(timer);
         }
