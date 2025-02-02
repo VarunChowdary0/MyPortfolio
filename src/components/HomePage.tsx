@@ -10,8 +10,8 @@ const HomePage: React.FC = () => {
     <>
     <div className=' bg-[#f1efec] min-h-screen '>
       <div className=' fixed flex pt-4 px-5 text-2xl max-sm:text-lg font-4 text-[#4e46dc] font-bold
-       top-0 left-0 right-0 bg-[#f1efec] h-[40px]'>
-        Sai varun Poludasu
+       top-0 left-0 right-0 bg-[#f1efec] h-[40px] '>
+        <p  className=' z-[500]'>Sai varun Poludasu</p>
       </div>
       <Header />
       {location.pathname === '/' ? <Introduction /> : <Outlet />}

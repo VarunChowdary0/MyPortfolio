@@ -65,7 +65,8 @@ const Projects: React.FC = () => {
     return (
         <div className="h-[calc(100vh-40px)] w-full pt-[6px] flex items-center justify-center">
             {isVisible && (
-                <div className="fixed z-10 bottom-5 flex items-center justify-center right-7 bg-[#323232] h-10 w-10 rounded-xl rotate-[180deg]">
+                <div className="fixed z-10 bottom-5 flex items-center justify-center right-7 bg-[#323232] 
+                h-10 w-10 rounded-xl rotate-[180deg]">
                     <motion.div
                         animate={{ y: [-2, 3, -2] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -76,7 +77,8 @@ const Projects: React.FC = () => {
             )}
 
             <div className="h-full w-[calc(100vw-2px)] pr-[2px] overflow-y-auto snap-y snap-mandatory">
-                <div className="h-fit bg-black/0 w-full flex items-center justify-center flex-col py-[20vh] max-md:pb-[30vh] gap-[30vh]">
+                <div className="h-fit bg-black/0 w-full flex items-center justify-center flex-col py-[20vh]
+                 max-md:pb-[30vh] gap-[30vh]">
                     {Projects.map((ele, index) => (
                         <motion.div
                         
