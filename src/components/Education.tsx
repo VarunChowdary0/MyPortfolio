@@ -85,7 +85,8 @@ const EducationTimeline = () => {
             <motion.div 
             initial={{ opacity: 0}}
             whileInView={{ opacity: 1}}
-            transition={{ duration: 0.5, delay: 0.6 }} className=" absolute left-[-5px] bg-blue-500 w-6 h-6 rounded-full max-sm:block hidden " />
+            transition={{ duration: 0.5, delay: 0.6 }} className=" absolute left-[-4px] 
+            bg-blue-500 w-6 h-6 rounded-full max-sm:block hidden " />
             <motion.div 
                 onPointerEnter={()=>{
                   if(index+1 == educationData.length){
