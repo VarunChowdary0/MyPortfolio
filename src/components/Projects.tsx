@@ -59,6 +59,23 @@ const Projects: React.FC = () => {
                   ],
           tags : ['C#','Console APP',".NET"],
           description : 'Built a file management and structuring Console App in C# using Data Structures and Object Oriented Programming. This project is my frist step in learnig .NET framework.'
+        },
+        {
+          link : '#',
+          github : ["https://github.com/VarunChowdary0/Library_Management_system_Console_app_C-sharp"],
+          name : 'Library management system',
+          image : ['project_images/lib_man_1.png',
+                   'project_images/lib_man_2.png',      
+                   'project_images/lib_man_3.png',      
+                   'project_images/lib_man_4.png', 
+                   'project_images/lib_man_5.png' ,
+                   'project_images/lib_man_6.png'
+                  ],
+          tags : ['C#','Console APP',".NET"],
+          description : `A .NET console application for managing day-to-day library operations, including
+book issuance, returns, catalog management, and user records. Built using C-sharp with OOP principles. Utilizes like
+lists and dictionaries for efficient data storage and retrieval.`
+
         }
     ];
 
@@ -81,7 +98,7 @@ const Projects: React.FC = () => {
                  max-md:pb-[30vh] gap-[30vh]">
                     {Projects.map((ele, index) => (
                         <motion.div
-                        
+                        id={ele.link}
                         onPointerEnter={()=>{
                           if(index+1 == Projects.length){
                             setIsVisible(false);
