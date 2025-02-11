@@ -1,6 +1,7 @@
 {
   "name": "games_react",
   "version": "0.1.0",
+  "proxy": "https://compete-iare-server-wefmkmqfe02392nj93.vercel.app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

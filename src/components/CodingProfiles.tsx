@@ -17,17 +17,18 @@ const CodingProfiles:React.FC = () => {
         },
       username: string
     }>();
-    useEffect(()=>{
-        document.title = 'Coding Profile'
-            axios.get("https://compete-iare-server-wefmkmqfe02392nj93.vercel.app/")
-            .then((res)=>{
-              console.log(res.data);
-              setLc(res.data.ScoreData.leetcode);
-            })
-            .catch((err)=>{
-              console.log(err);
-            })
-    },[])
+    useEffect(() => {
+        document.title = 'Coding Profile';
+        axios.get("https://compete-iare-server-wefmkmqfe02392nj93.vercel.app")
+          .then((res) => {
+            console.log(res.data);
+            setLc(res.data.ScoreData.leetcode);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }, []);
+      
     return (
       <div className=' h-screen w-full flex overflow-y-auto mt-[5px] flex-col py-[100px]'>
           {lc ? 
