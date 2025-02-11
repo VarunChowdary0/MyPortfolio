@@ -1,6 +1,18 @@
 import React from "react";
 
-const LeetCodeWid: React.FC = () => {
+interface curr{
+  data : {
+    name: string,
+  problemsSolved: {
+        All: number,
+        Easy: number,
+        Hard: number,
+        Medium: number
+    },
+  username: string
+  }
+}
+const LeetCodeWid: React.FC <curr> = ({data}) => {
   return (
     <div className=" z-0 bg-[#f1efec] pt-16 pb-5 max-sm:py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,9 +49,9 @@ const LeetCodeWid: React.FC = () => {
           <p className="mt-3   text-xl text-gray-500 sm:mt-4">
             <a
               className="hover:underline"
-              href="https://leetcode.com/u/Varun_chowdary99"
+              href={"https://leetcode.com/u/"+data.username}
             >
-              Varun_chowdary99
+              {data.username}
             </a>
           </p>
         </div>
@@ -55,7 +67,7 @@ const LeetCodeWid: React.FC = () => {
                     Easy Problems Solved
                   </div>
                   <dd className="order-1 text-5xl font-extrabold text-gray-700">
-                    98
+                    {data.problemsSolved.Easy}
                   </dd>
                 </div>
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
@@ -63,7 +75,7 @@ const LeetCodeWid: React.FC = () => {
                     Medium Problems Solved
                   </div>
                   <dd className="order-1 text-5xl font-extrabold text-gray-700">
-                    85
+                    {data.problemsSolved.Medium}
                   </dd>
                 </div>
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
@@ -71,7 +83,7 @@ const LeetCodeWid: React.FC = () => {
                     Hard Problems Solved
                   </div>
                   <dd className="order-1 text-5xl font-extrabold text-gray-700">
-                    11
+                    {data.problemsSolved.Hard}
                   </dd>
                 </div>
               </dl>

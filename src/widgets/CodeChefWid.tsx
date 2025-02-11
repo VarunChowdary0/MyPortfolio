@@ -1,5 +1,5 @@
-import axios from 'axios'
-import React, { useEffect } from 'react'
+
+import React from 'react'
 
 interface currentProps{
     color : string,
@@ -13,16 +13,6 @@ const Code_Chef:React.FC<currentProps> = (props) => {
     )
   }
   const CodeChefWid:React.FC = () => {
-  const username = "varun9392";
-  useEffect(()=>{
-    axios.get("https://iare-compete-python-scrapper.vercel.app/test_url_cc?username=varun9392")
-    .then((res)=>{
-      console.log(res.data);
-    })
-    .catch((err)=>{
-      console.log(err);
-    })
-  })
   return (
     <div className=" z-0 bg-[#f1efec] pt-16 pb-5 max-sm:py-10">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
