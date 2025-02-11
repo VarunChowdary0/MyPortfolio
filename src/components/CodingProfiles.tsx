@@ -16,7 +16,16 @@ const CodingProfiles:React.FC = () => {
             Medium: number
         },
       username: string
-    }>();
+    }>({
+        name : "",
+        problemsSolved:{
+            All : 194,
+            Easy : 98,
+            Hard : 11,
+            Medium : 85
+        },
+        username : "Varun_chowdary99"
+    });
     useEffect(() => {
         document.title = 'Coding Profile';
         axios.get("/api/")
