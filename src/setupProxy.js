@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'https://compete-iare-server-wefmkmqfe02392nj93.vercel.app',
+      target: 'https://compete-iare.vercel.app/',
       changeOrigin: true,
     })
   );
