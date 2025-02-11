@@ -19,15 +19,16 @@ const CodingProfiles:React.FC = () => {
     }>();
     useEffect(() => {
         document.title = 'Coding Profile';
-        axios.get("https://compete-iare-server-wefmkmqfe02392nj93.vercel.app")
+        axios.get("/api/")
           .then((res) => {
             console.log(res.data);
             setLc(res.data.ScoreData.leetcode);
           })
           .catch((err) => {
-            console.log(err);
+            console.error("API Request Failed:", err);
           });
       }, []);
+      
       
     return (
       <div className=' h-screen w-full flex overflow-y-auto mt-[5px] flex-col py-[100px]'>
