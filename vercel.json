@@ -1,0 +1,11 @@
+
+
+{
+    "rewrites": [
+      {
+        "source": "/api/:path*",  
+        "destination": "https://compete-iare-server-wefmkmqfe02392nj93.vercel.app/:path*"
+      }
+    ]
+  }
+  
