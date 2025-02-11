@@ -1,6 +1,17 @@
+import { motion } from "framer-motion";
 import React from "react";
 
-const GeekForGeeksWid:React.FC = () => {
+interface curr{
+    data : {
+      Rank: number,
+      college: string,
+      contest_rating: number,
+      problems_solved: number,
+      score: number,
+      username: string
+    }
+}
+const GeekForGeeksWid:React.FC <curr>= ({data}) => {
   return (
     <div className=" z-0 bg-[#f1efec] pt-16 pb-5 max-sm:py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +55,7 @@ const GeekForGeeksWid:React.FC = () => {
               target="_blank"
               href="https://geeksforgeeks.org/user/saivarunchowdary"
             >
-              saivarunchowdary
+              {data.username}
             </a>
           </p>
         </div>
@@ -53,6 +64,13 @@ const GeekForGeeksWid:React.FC = () => {
         <div className="relative">
           <div className="absolute inset-0 h-1/2 bg-[#f1efec]0"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className=" child absolute top-[50px] right-0 max-sm:hidden 
+                left-[100px] bg-blue-500 w-6 h-6 rounded-full" 
+            />
             <div className="max-w-4xl mx-auto">
               <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-4">
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
@@ -60,7 +78,7 @@ const GeekForGeeksWid:React.FC = () => {
                     Problems Solved
                   </div>
                   <dd className="order-1 text-5xl font-extrabold text-gray-700">
-                    46
+                    {data.problems_solved}
                   </dd>
                 </div>
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
@@ -68,7 +86,7 @@ const GeekForGeeksWid:React.FC = () => {
                     Score
                   </div>
                   <dd className="order-1 text-5xl font-extrabold text-gray-700">
-                    120
+                    {data.score}
                   </dd>
                 </div>
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
@@ -76,7 +94,7 @@ const GeekForGeeksWid:React.FC = () => {
                     Collage Rank
                   </div>
                   <dd className="order-1 text-5xl font-extrabold text-gray-700">
-                    399
+                    {data.Rank}
                   </dd>
                 </div>
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
@@ -84,7 +102,7 @@ const GeekForGeeksWid:React.FC = () => {
                     Contest Rating
                   </div>
                   <dd className="order-1 text-5xl font-extrabold text-gray-700">
-                    0
+                    {data.contest_rating}
                   </dd>
                 </div>
               </dl>

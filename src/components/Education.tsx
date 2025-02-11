@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ArrowIcon from "../icons/ArrowIcon";
+import { idText } from "typescript";
 
 const educationData:{
   year:string;
@@ -35,7 +36,7 @@ const educationData:{
 
 
 const EducationTimeline = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   return (
     <div className="h-[calc(100vh-30px)] overflow-y-hidden w-full pt-[6px] flex items-center justify-center">
        {isVisible && (
@@ -56,7 +57,7 @@ const EducationTimeline = () => {
           initial={{ height: 0,width:0, y: -200 }}  // Start off the screen (above) with height 0
           whileInView={{ opacity: 1, y: 0, width:'8px', height: "60%" }}  // Fall down to position (y: 0) and increase height
           transition={{ duration: 1.3, delay: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           className="flex items-center 
           bg-gradient-to-b
           from-[#ef8460] 
@@ -84,10 +85,10 @@ const EducationTimeline = () => {
           {educationData.map((edu, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -200}}
+                initial={{ opacity: 0, x: index%2==0?-400:400}}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: false }}
                 className=" bg-black/0 parent snap-center flex items-center relative"
               >
                 <motion.div 

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 interface curr{
@@ -18,7 +19,8 @@ const LeetCodeWid: React.FC <curr> = ({data}) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex items-center justify-between max-sm:flex-col">
           <div className=" flex items-center max-sm:ml-1 gap-4">
-            <div className=" hidden max-sm:block">
+            
+            <div className="  hidden max-sm:block">
               <svg
                 scale="6"
                 fill="orange"
@@ -58,8 +60,16 @@ const LeetCodeWid: React.FC <curr> = ({data}) => {
       </div>
       <div className="mt-10 pb-1 max-sm:sca">
         <div className="relative">
-          <div className="absolute inset-0 h-1/2 bg-[#f1efec]"></div>
+          <div className="absolute inset-0 h-1/2 bg-[#f1efec]">
+          </div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div 
+                  initial={{ opacity: 0}}
+                  whileInView={{ opacity: 1}}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                  className=" child absolute top-[50px] right-0 max-sm:hidden 
+                  left-[100px] bg-blue-500 w-6 h-6 rounded-full" 
+              />
             <div className="max-w-4xl mx-auto">
               <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">

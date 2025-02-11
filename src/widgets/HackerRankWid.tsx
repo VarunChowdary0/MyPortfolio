@@ -1,6 +1,43 @@
+import { motion } from "framer-motion";
 import React from "react";
 
-const HackerRankWid:React.FC = () => {
+interface curr{
+  data : {
+    badges: {
+      fiveStarBadge: number,
+      fourStarBadge: number,
+      oneStarBadge: number,
+      threeStarBadge: number,
+      twoStarBadge: number
+    },
+    certificates: {
+      advanced: number,
+      basic: number,
+      intermediate: number
+    },
+    name: string,
+    username: string
+  }
+}
+
+interface col{
+  fill : string;
+}
+
+const Star:React.FC<col> = ({fill}) =>{
+  return(
+    <svg
+        fill={fill}
+        xmlns="http://www.w3.org/2000/svg"
+        height="16"
+        width="18"
+        viewBox="0 0 576 512"
+      >
+        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+      </svg>
+  );
+}
+const HackerRankWid:React.FC<curr> = ({data}) => {
   return (
     <div className=" z-0 bg-[#f1efec] pt-16 pb-5 max-sm:py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +80,7 @@ const HackerRankWid:React.FC = () => {
               className="hover:underline"
               href="https://hackerrank.com/profile/saivarunchowdar2"
             >
-              saivarunchowdar2
+              {data.username}
             </a>
           </p>
         </div>
@@ -52,6 +89,13 @@ const HackerRankWid:React.FC = () => {
         <div className="relative">
           <div className="absolute inset-0 h-1/2 bg-[#f1efec]"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className=" child absolute top-[100px] right-0 max-sm:hidden 
+                left-[100px] bg-blue-500 w-6 h-6 rounded-full" 
+            />
             <div className="max-w-4xl mx-auto">
               <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-2">
                 <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
@@ -61,253 +105,53 @@ const HackerRankWid:React.FC = () => {
                   <div className=" flex flex-col items-center justify-center">
                     <div className=" flex items-center gap-3">
                       <div className=" flex items-center justify-center">
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
                       </div>
-                      1
+                      {data.badges.fiveStarBadge}
                     </div>
                     <div className=" flex items-center gap-3">
                       <div className=" flex items-center justify-center">
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
+                        <Star fill="#7f8a8e"/>
                       </div>
-                      0
+                      {data.badges.fourStarBadge}
                     </div>
                     <div className=" flex items-center gap-3">
                       <div className=" flex items-center justify-center">
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
+                        <Star fill="#7f8a8e"/>
+                        <Star fill="#7f8a8e"/>
                       </div>
-                      0
+                      {data.badges.threeStarBadge}
                     </div>
                     <div className=" flex items-center gap-3">
                       <div className=" flex items-center justify-center">
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
+                        <Star fill="gold"/>
+                        <Star fill="gold"/>
+                        <Star fill="#7f8a8e"/>
+                        <Star fill="#7f8a8e"/>
+                        <Star fill="#7f8a8e"/>
                       </div>
-                      0
+                      {data.badges.twoStarBadge}
                     </div>
                     <div className=" mb-3 flex items-center gap-3">
                       <div className=" flex items-center justify-center">
-                        <svg
-                          fill="gold"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
-                        <svg
-                          fill="#7f8a8e"
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="16"
-                          width="18"
-                          viewBox="0 0 576 512"
-                        >
-                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
-                        </svg>
+                        <Star fill="gold"/>
+                        <Star fill="#7f8a8e"/>
+                        <Star fill="#7f8a8e"/>
+                        <Star fill="#7f8a8e"/>
+                        <Star fill="#7f8a8e"/>
                       </div>
-                      0
+                      {data.badges.oneStarBadge}
                     </div>
                   </div>
                 </div>
@@ -320,21 +164,21 @@ const HackerRankWid:React.FC = () => {
                       <p className=" max-sm:text-sm text-lg tracking-widest max-sm:tracking-wide font-semibold">
                         Advanced -
                       </p>
-                      <p>0</p>
+                      <p>{data.certificates.advanced}</p>
                     </div>
                     <div className=" h-10 max-sm:h-8 w-[1px] bg-[#bdbdbd]"></div>
                     <div className=" flex items-center justify-center gap-1">
                       <p className=" max-sm:text-sm text-lg tracking-widest max-sm:tracking-wide font-semibold">
                         Intermidiate -
                       </p>
-                      <p>0</p>
+                      <p>{data.certificates.intermediate}</p>
                     </div>
                     <div className=" h-10 max-sm:h-8 w-[1px] bg-[#bdbdbd]"></div>
                     <div className=" flex items-center justify-center gap-1">
                       <p className=" max-sm:text-sm text-lg tracking-widest max-sm:tracking-wide font-semibold">
                         Basic -
                       </p>
-                      <p>3</p>
+                      <p>{data.certificates.basic}</p>
                     </div>
                   </div>
                 </div>
