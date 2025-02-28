@@ -26,6 +26,15 @@ const InternShipsAndCertifs:React.FC = () => {
                   description: 'Successfully completed the course, powered by IBM, on eTrain.SkillNetwork. This course covered key machine learning concepts, including supervised and unsupervised learning, data preprocessing, model evaluation, and implementation using Python libraries such as Scikit-Learn and TensorFlow.'
               },
               {
+                  link: 'https://www.freecodecamp.org/certification/fcc5ef2e0bb-70c6-4f90-8c0c-8fcbdbabf976/foundational-c-sharp-with-microsoft',
+                  name: 'Foundational C# with Microsoft',
+                  sub : "Developer Certification",
+                  type : "Certification",
+                  image:'/i_and_c/microsoft_c_sharp.png',
+                  tags: ['Microsoft', 'freecodecamp','C#'],
+                  description: 'Successfully completed this course, gaining a strong foundation in C# programming, including variables, data types, operators, control flow (loops and conditionals), functions, and object-oriented programming (OOP) principles. The course also covered error handling and debugging, enhancing problem-solving skills. Through hands-on exercises and projects, I applied my learning to real-world scenarios, preparing for C# development in .NET applications and game development.'
+              },
+              {
                 link: 'https://drive.google.com/file/d/1nlec_8VVZCIfeOa5AaR-DddgyprwZI2p/view?usp=sharing',
                 name: 'Artificial Intelligence with EdiGlobe',
                 sub : "",
