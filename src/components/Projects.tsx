@@ -21,6 +21,25 @@ const Projects: React.FC = () => {
         description : string;
     }[] = [
         {
+            link: '#',
+            github: [
+                "https://github.com/VarunChowdary0/congenial-invention-of-step-buy-NEXT",
+                "https://github.com/VarunChowdary0/congenial-invention-of-step-buy-server"],
+            name: 'Step Buy',
+            image: [
+                'project_images/step_buy_1.png',
+                'project_images/step_buy_2.png',
+                'project_images/step_buy_3.png',
+                'project_images/step_buy_4.png',
+                'project_images/step_buy_5.png',
+                'project_images/step_buy_6.png',
+                'project_images/step_buy_7.png',
+                'project_images/step_buy_8.png'
+            ],
+            tags: ['React', 'TailwindCss'],
+            description: 'This portfolio is a personal website that highlights my skills, projects, and achievements. It serves as a professional online presence, allowing visitors to explore my work.'
+        },
+        {
             link: 'https://saivarun.vercel.app',
             github: ["https://github.com/VarunChowdary0/MyPortfolio"],
             name: 'My Portfolio',
